@@ -183,7 +183,7 @@ This API provides endpoints for managing chat rooms and messages. It allows user
 4. **Run the Application with Docker:**
 
    ```bash
-   docker-compose up
+   docker compose up
 
    ```
 
