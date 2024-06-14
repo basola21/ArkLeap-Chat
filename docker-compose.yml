@@ -5,16 +5,22 @@ services:
     image: postgres
     environment:
       POSTGRES_DB: chatapp
-      POSTGRES_USER: your_db_user
-      POSTGRES_PASSWORD: your_db_password
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
       - "5432:5432"
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command: >
+      sh -c "
+      poetry run python chatapp/manage.py makemigrations &&
+      poetry run python chatapp/manage.py migrate &&
+      poetry run python chatapp/manage.py runserver 0.0.0.0:8000"
     volumes:
       - .:/app
     ports:
       - "8000:8000"
     depends_on:
       - db
+    env_file:
+      - ./chatapp/.env

@@ -1,0 +1,28 @@
+# Ignore Python bytecode files
+__pycache__
+*.pyc
+*.pyo
+
+# Ignore virtual environment directories
+venv/
+.venv/
+
+# Ignore local settings
+.env
+.env.local
+.env.production
+.env.test
+
+# Ignore SQLite database
+db.sqlite3
+
+# Ignore log files
+*.log
+
+# Ignore node_modules
+node_modules/
+
+# Ignore temporary files
+*.swp
+.DS_Store
+
