@@ -5,6 +5,10 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from django.shortcuts import get_object_or_404
 
+"""
+Here in the views I like to use simple build in functions whenever posible so as you can see it is not too long and easy to understand.
+"""
+
 
 class ChatRoomViewSet(viewsets.ModelViewSet):
     queryset = ChatRoom.objects.all()

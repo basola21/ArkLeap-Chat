@@ -1,5 +1,11 @@
 from django.db import models
 
+"""
+Here in the models file I always like to use a manager since I can customize it the way I want,
+however this is a little bit more broken down than what I would tipicaly use it is this way for the sake
+of demonstraing my refactoring approch
+"""
+
 
 class ChatRoomQuerySet(models.QuerySet):
     def active(self):
