@@ -168,7 +168,7 @@ This API provides endpoints for managing chat rooms and messages. It allows user
    POSTGRES_DB=chatapp
    POSTGRES_USER=your_db_user
    POSTGRES_PASSWORD=your_db_password
-   POSTGRES_HOST=localhost
+   POSTGRES_HOST=dp
    POSTGRES_PORT=5432
 
    ```
