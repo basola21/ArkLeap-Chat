@@ -10,9 +10,9 @@ This API provides endpoints for managing chat rooms and messages. It allows user
 2. [Setup and Running the API](#setup-and-running-the-api)
 3. [Testing the API](#testing-the-api)
 
-## API Endpoints
+# API Endpoints
 
-### Chat Rooms
+## Chat Rooms
 
 - **Create Chat Room**
 
@@ -67,7 +67,7 @@ This API provides endpoints for managing chat rooms and messages. It allows user
     }
     ```
 
-### Messages
+## Messages
 
 - **Create Message**
 
@@ -139,8 +139,7 @@ This API provides endpoints for managing chat rooms and messages. It allows user
         "chat_room": "integer",
         "content": "string",
         "created_at": "datetime"
-      },
-      ...
+      }
     ]
     ```
 
@@ -189,8 +188,7 @@ This API provides endpoints for managing chat rooms and messages. It allows user
    ```
 
 5. **Access the API Documentation:**
-   - Swagger UI: [http://localhost:8000/swagger/](http://localhost:8000/swagger/)
-   - ReDoc: [http://localhost:8000/redoc/](http://localhost:8000/redoc/)
+   - Defualt UI: [http://localhost:8000/api/](http://localhost:8000/api/)
 
 ## Testing the API
 
@@ -202,4 +200,3 @@ Run the tests using Django's test framework:
 python manage.py test
 
 ```
-
