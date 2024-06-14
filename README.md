@@ -156,7 +156,7 @@ This API provides endpoints for managing chat rooms and messages. It allows user
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-repo/chatapp.git
+   git clone https://github.com/basola21/ArkLeap-Chat.git
    cd chatapp
    ```
 
@@ -164,7 +164,7 @@ This API provides endpoints for managing chat rooms and messages. It allows user
    Create a `.env` file in the root directory and add the following:
 
    ```env
-   IN_DOCKER=false
+   IN_DOCKER=True
    POSTGRES_DB=chatapp
    POSTGRES_USER=your_db_user
    POSTGRES_PASSWORD=your_db_password
@@ -197,6 +197,6 @@ This API provides endpoints for managing chat rooms and messages. It allows user
 Run the tests using Django's test framework:
 
 ```bash
-python manage.py test
+poetry run python manage.py test
 
 ```

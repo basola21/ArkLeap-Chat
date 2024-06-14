@@ -1,12 +1,13 @@
 version: "3"
 
+# normally I would use a script for the commands below instead of writing them in the docker file
+# but I chose to write them here for the sake of simplicity
+
 services:
   db:
     image: postgres
-    environment:
-      POSTGRES_DB: chatapp
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
+    env_file:
+      - ./chatapp/.env
     ports:
       - "5432:5432"
   web:
