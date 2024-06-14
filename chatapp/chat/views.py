@@ -1,9 +1,9 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, status
 from .models import ChatRoom, Message
 from .serializers import ChatRoomSerializer, MessageSerializer
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from rest_framework import status
+from django.shortcuts import get_object_or_404
 
 
 class ChatRoomViewSet(viewsets.ModelViewSet):
@@ -25,7 +25,8 @@ class MessageViewSet(viewsets.ModelViewSet):
     def search(self, request, pk=None):
         query = request.query_params.get("q")
         if query:
-            messages = Message.objects.by_chat_room(pk).search_content(query)
+            chat_room = get_object_or_404(ChatRoom, pk=pk)
+            messages = Message.objects.by_chat_room(chat_room).search_content(query)
             serializer = MessageSerializer(messages, many=True)
             return Response(serializer.data)
         return Response(status=status.HTTP_400_BAD_REQUEST)

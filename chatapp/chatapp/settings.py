@@ -17,8 +17,6 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-print("this is the base dir : ", BASE_DIR)
-print(os.getenv("IN_DOCKER"))
 # Application definition
 
 INSTALLED_APPS = [

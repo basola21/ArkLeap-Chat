@@ -41,6 +41,9 @@ class MessageManager(models.Manager):
     def create_message(self, chat_room, content):
         return self.create(chat_room=chat_room, content=content)
 
+    def by_chat_room(self, chat_room):
+        return self.get_queryset().by_chat_room(chat_room)
+
 
 class Message(models.Model):
     number = models.AutoField(primary_key=True)
