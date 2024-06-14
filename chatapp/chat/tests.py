@@ -15,7 +15,7 @@ class MessageTests(APITestCase):
     def test_create_message(self):
         chat_room = ChatRoom.objects.create(name="Test Room")
         response = self.client.post(
-            f"/api/messages/", {"chat_room": chat_room.id, "content": "Hello"}
+            f"/api/messages/", {"chat_room": chat_room.number, "content": "Hello"}
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Message.objects.count(), 1)
