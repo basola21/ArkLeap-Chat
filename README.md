@@ -166,9 +166,9 @@ This API provides endpoints for managing chat rooms and messages. It allows user
    ```env
    IN_DOCKER=True
    POSTGRES_DB=chatapp
-   POSTGRES_USER=your_db_user
-   POSTGRES_PASSWORD=your_db_password
-   POSTGRES_HOST=dp
+   POSTGRES_USER=postgres
+   POSTGRES_PASSWORD=postgres
+   POSTGRES_HOST=db
    POSTGRES_PORT=5432
 
    ```
